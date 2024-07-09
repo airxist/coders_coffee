@@ -3,6 +3,20 @@ import coffee2 from '../assets/coffee/coffee3.png';
 import apple from '../assets/website/app_store.png';
 import google from '../assets/website/play_store.png';
 
+export const codersCafe = {
+  title: 'Coders Cafe',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea ratione quidem libero, praesentium ab atque? Quidem maxime, numquam dolores',
+  phone: '+1 (123) 456-7890',
+  address: 'Lagos, Nigeria'
+}
+
+export const quickLinks = [
+  'Home',
+  'About',
+  'Contact us',
+  'Privacy Policy'
+]
+
 export const download = {
   title: 'Download the app',
   description: "Lorem ipsum dolor sit amet consedolor sit amet consectetur adipisicing elit. Officiis",

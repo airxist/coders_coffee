@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <section class="py-20 border border-red-500">
+  <section class="py-20">
     <div class="container">
-      <div class="md:flex border items-center space-x-7">
+      <div class="md:flex items-center space-x-7">
         <div class="md:w-2/5">
           <h3 class="font-bold text-5xl">Buy our products from anywhere</h3>
 
@@ -67,7 +67,7 @@ export default {
         </div>
       </div>
       <!-- call to coffeCover -->
-      <div class="mt-32 relative isolate h-[30rem]">
+      <div class="mt-32 relative isolate md:h-[30rem]">
         <!-- the coffee image and keyboard -->
         <div class="absolute top-0 left-0 h-full w-full rounded-2xl overflow-hidden -z-10">
           <img 
@@ -76,16 +76,16 @@ export default {
           />
         </div>
         <!-- dowload article -->
-        <article class="border h-full md:w-[40rem] p-24 flex flex-col items-center justify-center space-y-5">
+        <article class="h-full md:w-[40rem] md:ml-auto p-5 md:p-24 flex flex-col items-center justify-center space-y-5">
           <h3 class="text-black text-4xl font-semibold">{{ download.title }}</h3>
           <p class="text-lg md:w-5/6 text-center">{{ download.description }}</p>
           <div class="flex items-center">
-            <div>
+            <a class="cursor-pointer">
               <img :src="download.apple" alt="apple" />
-            </div>
-            <div>
+            </a>
+            <a class="cursor-pointer">
               <img :src="download.google" alt="google" />
-            </div>
+            </a>
           </div>
         </article>
       </div>
