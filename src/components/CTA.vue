@@ -18,15 +18,52 @@ export default {
 }
 </script>
 
+<script setup>
+import gsap from 'gsap';
+import { ref, onMounted } from 'vue';
+import { animationFrom } from '../animate/animate';
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const title = ref(null);
+const formRows = ref(null);
+
+onMounted (() => {
+  animationFrom(title, {
+    x: 200,
+    autoAlpha: 0,
+    z: 1000,
+    scrollTrigger: {
+      trigger: title.value,
+      start: 'top center'
+    }
+  })
+
+  animationFrom(formRows, {
+    x: 200,
+    autoAlpha: 0,
+    z: 1000,
+    scrollTrigger: {
+      trigger: formRows.value,
+      start: 'top center'
+    },
+    stagger: {
+      amount: 0.5
+    }
+  }, true)
+})
+</script>
+
 <template>
   <section class="py-20">
     <div class="container">
       <div class="md:flex items-center space-x-7">
         <div class="md:w-2/5">
-          <h3 class="font-bold text-5xl">Buy our products from anywhere</h3>
+          <h3 ref="title" class="font-bold text-5xl">Buy our products from anywhere</h3>
 
           <form class="mt-10">
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-7">
+            <div ref="formRows" class="grid grid-cols-2 md:grid-cols-5 gap-x-5 gap-y-7">
               <FormRow 
                 type="text"
                 name="fullname"
