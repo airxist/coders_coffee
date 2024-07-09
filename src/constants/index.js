@@ -1,5 +1,14 @@
 import coffee1 from '../assets/coffee/coffee1.png';
 import coffee2 from '../assets/coffee/coffee3.png';
+import apple from '../assets/website/app_store.png';
+import google from '../assets/website/play_store.png';
+
+export const download = {
+  title: 'Download the app',
+  description: "Lorem ipsum dolor sit amet consedolor sit amet consectetur adipisicing elit. Officiis",
+  apple: apple,
+  google: google
+}
 
 export const coffeeTypes = [
   {
