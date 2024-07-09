@@ -1,3 +1,27 @@
+import coffee1 from '../assets/coffee/coffee1.png';
+import coffee2 from '../assets/coffee/coffee3.png';
+
+export const coffeeTypes = [
+  {
+    id: 1,
+    image: coffee1,
+    title: 'Black Coffee',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    id: 2,
+    image: coffee2,
+    title: 'Hot Coffee',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    id: 3,
+    image: coffee1,
+    title: 'Cold Coffee',
+    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }
+]
+
 export const heroTitle = "Blvck Tumbler";
 
 export const heroItems = [
